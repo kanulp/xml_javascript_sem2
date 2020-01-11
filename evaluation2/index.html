@@ -1,0 +1,33 @@
+<html>
+
+<head>
+</head>
+
+<body bgcolor="lightyellow">
+
+    <form action="/action_page.php">
+        Your email * :
+        <input type="text" id="email" name="email" value="">
+        <br>Date of visit :
+        <input type="text" id="date" name="date" value="" placeholder="mm/dd/yyyy">
+        <br>
+        <p>Your Comments</p>
+        <textarea rows="4" cols="50" id="comment">
+            </textarea><br>
+        <input type="button" value="Send your feedback" onclick="myFunction()">
+    </form>
+    <p id="content"></p>
+
+</body>
+
+<script>
+    function myFunction() {
+        let email = document.getElementById("email").value;
+        let date = document.getElementById("date").value;
+        let comment = document.getElementById("comment").value;
+        let feedback = "Email : " + email + "<br>Date of visit : " + date + "<br>Comments : " + comment;
+        document.getElementById("content").innerHTML = feedback;
+    }
+</script>
+
+</html>
