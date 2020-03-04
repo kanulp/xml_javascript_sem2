@@ -1,0 +1,6 @@
+<!ELEMENT SchoolLibrary (book+)>
+<!ELEMENT book (publicationYear,title,author,Description)>
+<!ELEMENT publicationYear (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>

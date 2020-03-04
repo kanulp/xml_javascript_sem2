@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        //Create the XHR object
+        var xhttp = new XMLHttpRequest();
+        //Open the file
+        xhttp.open("GET", "lib.xml", false);
+        //Send the request
+        xhttp.send();
+        // Read data
+        xmlDoc = xhttp.responseXML;
+        var title = xmlDoc.getElementsByTagName("title");
+        var author = xmlDoc.getElementsByTagName("author");
+        var description = xmlDoc.getElementsByTagName("description");
+
+        var x = xmlDoc.getElementsByTagName("play");
+        let txt = "<table border='1'>";
+        txt += "<th>ID</th><th>Title</th><th>Author</th><th>Description</th>";
+        for (let i = 0; i < description.length; i++) {
+            txt += "<tr>"
+            txt += "<td>" + (i + 1) + "</td>"
+            txt += "<td>" + title[i].innerHTML + "</td>";
+            txt += "<td>" + author[i].innerHTML + "</td>";
+            txt += "<td>" + description[i].innerHTML + "</td>";
+            txt += "</tr>";
+        }
+        txt += "</table>"
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+
+    <p id="demo"></p>
+</body>
+
+</html>

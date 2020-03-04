@@ -1,0 +1,8 @@
+<!ELEMENT products (product+) >
+<!ELEMENT product (productName,manufacturer,description,price+,productItems) >
+<!ELEMENT productName (#PCDATA)>
+<!ELEMENT manufacturer (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT productItems (#PCDATA)>
+<!ATTLIST price currency (EURO|USD|CAD) #REQUIRED>

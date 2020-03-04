@@ -1,0 +1,6 @@
+{
+    "car": [
+        { "platno": "ABX123", "Make": "Toyota", "Model": "Corolla", "Price": 2300 },
+        { "platno": "ABX123", "Make": "Toyota", "Model": "Corolla", "Price": 2300 }
+    ]
+}

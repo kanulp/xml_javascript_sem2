@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="Question6_modified.xsl" ?> 
+<orders> 
+    <order customerid="2384"> 
+        
+        <status>pending</status> 
+        <item instock="Y" itemid="SD93"> 
+            <name>Flying By Roller Skates</name> 
+            <price>25.00</price> 
+            <qty>25</qty> 
+        </item> 
+        <item instock="N" itemid="B12"> 
+            <name>Bounce-o Ball</name> 
+            <price>.35</price> 
+            <qty>150</qty> 
+        </item> 
+    </order> 
+    <order customerid="5268"> 
+        <status>complete</status> 
+        <item instock="Y" itemid="Q52"> 
+            <name>Crash N Burn Skis</name> 
+            <price>20</price> 
+            <qty>10</qty> 
+        </item> 
+    </order> 
+	<order customerid="3384"> 
+     
+        <status>pending</status> 
+        <item instock="Y" itemid="PS93"> 
+            <name>All Star Shoe</name> 
+            <price>55.00</price> 
+            <qty>12</qty> 
+        </item> 
+        <item instock="Y" itemid="M12"> 
+            <name>All Star Hat</name> 
+            <price>44.35</price> 
+            <qty>15</qty> 
+        </item> 
+    </order> 
+	<order customerid="9008"> 
+       
+        <status>pending</status> 
+        <item instock="N" itemid="F32"> 
+            <name>Fancy Shirt</name> 
+            <price>120</price> 
+            <qty>100</qty> 
+        </item> 
+    </order>  
+        <order customerid="1001">  
+        <status>complete</status> 
+        <item instock="N" itemid="E01"> 
+            <name>Track Pants</name> 
+            <price>180</price> 
+            <qty>50</qty> 
+        </item> 
+    </order> 
+    	<order customerid="1002">
+        <status>pending</status> 
+        <item instock="N" itemid="Z32"> 
+            <name>CAPS</name> 
+            <price>320</price> 
+            <qty>100</qty> 
+        </item> 
+    </order> 
+    	<order customerid="1003"> 
+        <status>pending</status> 
+        <item instock="N" itemid="A32"> 
+            <name>Jackest</name> 
+            <price>520</price> 
+            <qty>40</qty> 
+        </item> 
+    </order> 
+</orders> 

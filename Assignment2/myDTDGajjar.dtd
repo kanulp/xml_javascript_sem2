@@ -1,0 +1,13 @@
+<!ELEMENT catalog (cd+)>
+<!ELEMENT cd (title,artist,country,company,price,salesPrice*,releasedYear)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT artist (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT salesPrice (#PCDATA)>
+<!ELEMENT releasedYear (#PCDATA)>
+<!ATTLIST cd id ID #REQUIRED>
+<!ATTLIST price currency (EURO|USD|CAD) #REQUIRED>
+<!ATTLIST salesPrice currency (EURO|USD|CAD) #REQUIRED>
+<!ATTLIST title lang (en|es) #REQUIRED>

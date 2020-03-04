@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        //Create the XHR object
+        var xhttp = new XMLHttpRequest();
+        //Open the file
+        xhttp.open("GET", "library_item.xml", false);
+        //Send the request
+        xhttp.send();
+        // Read data
+        xmlDoc = xhttp.responseXML;
+        //Display data   
+        let ISBN = xmlDoc.getElementsByTagName("isbn");
+        let title = xmlDoc.getElementsByTagName("title");
+        let authors = xmlDoc.getElementsByTagName("authors");
+        let publisher = xmlDoc.getElementsByTagName("publisher");
+        let status = xmlDoc.getElementsByTagName("status");
+        let type = xmlDoc.getElementsByTagName("type");
+        let p = "<table border='1'>";
+        p += "<th>No.</th><th>ISBN</th><th>Title</th><th>Author(s)</th><th>Publisher</th><th>Status</th>"
+        for (let index = 0; index < ISBN.length; index++) {
+            if (type[index].innerHTML == "Visual Material") {
+                p += "<tr>";
+                p += "<td>" + (index + 1) + "</td>"
+                p += "<td>" + ISBN[index].innerHTML + "</td>";
+                p += "<td>" + title[index].innerHTML + "</td>";
+                p += "<td>" + authors[index].innerHTML + "</td>";
+                p += "<td>" + publisher[index].innerHTML + "</td>";
+                p += "<td>" + status[index].innerHTML + "</td>";
+                p += "</tr>";
+            }
+
+        }
+        p += "</table>";
+        document.getElementById("demo").innerHTML = p;
+    </script>
+
+    <p id="demo"></p>
+</body>
+
+</html>

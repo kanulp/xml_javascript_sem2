@@ -1,0 +1,17 @@
+<stu:students xmlns:stu="http://ABC.com/stu">
+    <!-- a Developmentor student -->
+    <stu:student>
+      <stu:id>3235329</stu:id>
+      <stu:name>Jeff Smith</stu:name>
+      <stu:language>C#</stu:language>
+      <stu:rating>9.5</stu:rating>
+    </stu:student>
+    
+    <!-- an elementary school student -->
+    <stu:student>
+      <stu:id>534-22-5252</stu:id>
+      <stu:name>Jill Smith</stu:name>
+      <stu:language>Spanish</stu:language>
+      <stu:rating>3.2</stu:rating>
+    </stu:student>
+</stu:students>

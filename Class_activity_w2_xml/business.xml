@@ -1,0 +1,12 @@
+<business>
+    <personal_info>
+        <fname>Joe </fname>
+        <lname>marini</lname>
+    </personal_info>
+    <contact>
+        <phone type="home">+1234567890</phone>
+        <phone type="work">+1234567890</phone>
+        <phone type="mobile">+1234567890</phone>
+        <email>joe@123.com</email>
+    </contact>
+</business>

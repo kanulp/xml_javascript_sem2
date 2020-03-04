@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Question6.xsl" ?>
+<orders>
+   <order>
+      <customerid>2384</customerid>
+      <status>pending</status>
+      <item itemid="SD93" instock="Y">
+         <name>Flying By Roller Skates</name>
+         <price>25.00</price>
+         <qty>25</qty>
+      </item>
+      <item itemid="B12" instock="N">
+         <name>Bounce-o Ball</name>
+         <price>.35</price>
+         <qty>150</qty>
+      </item>
+   </order>
+   <order>
+      <customerid>5268</customerid>
+      <status>complete</status>
+      <item itemid="Q52" instock="Y">
+         <name>Crash N Burn Skis</name>
+         <price>20</price>
+         <qty>10</qty>
+      </item>
+   </order>
+   <order>
+      <customerid>3384</customerid>
+      <status>pending</status>
+      <item itemid="PS93" instock="Y">
+         <name>All Star Shoe</name>
+         <price>55.00</price>
+         <qty>12</qty>
+      </item>
+      <item itemid="M12" instock="Y">
+         <name>All Star Hat</name>
+         <price>44.35</price>
+         <qty>15</qty>
+      </item>
+   </order>
+   <order>
+      <customerid>9008</customerid>
+      <status>pending</status>
+      <item itemid="F32" instock="N">
+         <name>Fancy Shirt</name>
+         <price>120</price>
+         <qty>100</qty>
+      </item>
+   </order>
+</orders>

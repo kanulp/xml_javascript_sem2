@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    QUESTION 8
+  </title>
+  <style>
+    body {
+      width: 400px;
+      height: 300px;
+      background-color: khaki;
+    }
+
+    th {
+      background-color: blue;
+      color: cornsilk;
+    }
+
+    td {
+      border-bottom: none;
+    }
+
+    #button {
+      background-color: blue;
+      color: black;
+      height: 30px;
+      width: 80px;
+    }
+
+    #textfield {
+      background-color: white-space;
+      border: 2px solid blue;
+      height: 20px;
+    }
+
+    h3 {
+      text-decoration: underline;
+    }
+
+    table {
+      background-color: khaki;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>QUESTION 8</h1>
+  <p>
+    <label for="textfield">Enter Item Name : </label>
+    <input type="text" name="textfield" id="textfield" placeholder="Search Here">
+    <input type="submit" name="button" id="button" value="Search" onclick="order_Function()">
+  </p>
+  <h3>List of all information about the item</h3>
+  <p id="demo"></p>
+  <div id="enterName">
+  </div>
+
+  <script>
+
+    //Create the XHR object
+    var xhttp = new XMLHttpRequest();
+    //Open the file
+    xhttp.open("GET", "Question8.xml", false);
+    //Send the request
+    xhttp.send();
+    // Read data
+    xmlDoc = xhttp.responseXML;
+    //Display data  
+    function order_Function() {
+      input = document.getElementById("textfield").value;
+      size = input.length;
+      item = xmlDoc.getElementsByTagName("name");
+      id = xmlDoc.getElementsByTagName("item");
+      if (input == "") {
+        document.getElementById("enterName").innerHTML = "Please enter ITEM NAME!";
+        document.getElementById("demo").innerHTML = "";
+      }
+      else {
+        output = "<table  border ='1' width='229'><th>Name</th><th>Item Id</th>";
+
+        for (i = 0; i < item.length; i++) {
+          name = xmlDoc.getElementsByTagName("name")[i].innerHTML;
+          itemName = name.substring(0, size);
+
+          if (itemName.toLowerCase() == input.toLowerCase()) {
+
+            output += "<tr>";
+            output += "<td>" + item[i].innerHTML + "</td>";
+            output += "<td>" + id[i].getAttribute('itemid') + "</td>";
+            output += "</td>";
+          }
+
+        }
+        output += "</table>";
+        document.getElementById("demo").innerHTML = output;
+        document.getElementById("enterName").innerHTML = "";
+
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

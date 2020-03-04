@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<products>
+    <product>
+        <productName>Dog Shirt Gift Basket</productName>
+        <manufacturer>&#174; SJB Pet Boutique</manufacturer>
+        <description>Something for every day of the week</description>
+        <price currency="USD">$35.99</price>
+        <price currency="CAD">$45.99</price>
+        <price currency="EURO">&#8364; 25.99</price>        
+        <productItems>1200, 1201, 1202, 1203, 1204</productItems>
+        <message>
+        <![CDATA[
+
+        For futher information, please visit or call is on #905-111-2222 <our website> &amp; +1-800-111-2222
+        ]]>
+
+        </message>
+    </product>
+    <product>
+        <productName>Cat Shirt Gift Basket</productName>
+        <manufacturer>&#174; SJB Pet Boutique</manufacturer>
+        <description>Something for every day of the week</description>
+        <price currency="USD">$45.99</price>
+        <price currency="CAD">$75.99</price>
+        <price currency="EURO">&#8364; 35.99</price>        
+        <productItems>1300, 1301, 1302, 1303, 1304</productItems>
+    </product>
+</products>

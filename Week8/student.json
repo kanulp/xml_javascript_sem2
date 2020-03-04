@@ -1,0 +1,6 @@
+{
+    "Student": [
+        { "fname": "Sara", "address": "Toronto" },
+        { "fname": "John", "address": "Toronto" }
+    ]
+}

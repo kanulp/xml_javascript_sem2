@@ -1,0 +1,12 @@
+<!ELEMENT orders (order+)>
+<!ELEMENT order (customerid, status, item+)>
+<!ELEMENT customerid (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT item (name, price, qty)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT qty (#PCDATA)>
+<!ATTLIST item
+	itemid (B12 | F32 | M12 | PS93 | Q52 | SD93) #REQUIRED
+	instock (N | Y) #REQUIRED
+>

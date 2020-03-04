@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SchoolLibrary SYSTEM "schoolDTD.dtd">
+
+<SchoolLibrary 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://example.com/xsd schoolXSD.xsd">
+
+    <book>
+    <publicationYear>1898</publicationYear>
+    <title>Arms &amp; The Man</title>
+    <author>George Bernard Shaw</author>
+    <Description>:Comedy dealing with the futility of war and the hypocrisy of human nature.Genres: Drama
+    </Description>
+    </book>
+
+    <book> 
+    <publicationYear>1950</publicationYear>
+    <title>The Mousetrap</title>
+    <author>Agatha Christie</author>
+    <Description> A traditional story with an extraordinary twist.</Description>
+    </book>
+</SchoolLibrary>

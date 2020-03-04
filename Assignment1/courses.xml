@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="courses.css" ?>
+<!DOCTYPE college [
+<!ELEMENT college (semesters+) >
+<!ELEMENT semesters (semester+) >
+<!ELEMENT semester (no,courses) >
+<!ELEMENT courses (course+) >
+<!ELEMENT course (title,courseId,description,time)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT courseId (#PCDATA)>
+<!ELEMENT no (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+]>
+<college>
+   <semesters>
+      <semester>
+          <no>Semester 1</no>
+          <courses>
+            <course>
+                <title>Operating System</title>
+                <courseId>ITC 5101</courseId>
+                <description>Operating Systems is a course designed to give the user knowledge of one of the most popular and powerful operating systems used today. In this course, the student will acquire an understanding of UNIX and compare it with Linux operating system. The student will learn how to create shell script programs and how to control and manipulate the user environment.
+                </description>
+                <time>Monday 3 pm</time>
+            </course>
+            <course>
+              <title>Java Programming 1</title>
+              <courseId>ITC 5102</courseId>
+              <description>In this introductory programming course, students learn the programming fundamentals that must be acquired for any programming language. Emphasis is placed on objects and object-oriented programming. Java is the language used to learn these concepts. Introductory programming applications will be built, tested and debugged to practise these skills. The course focuses on the three fundamental logical structures (sequences, decisions and loops).
+              </description>
+              <time>Tuesday 3 pm</time>
+           </course>
+            </courses>
+          
+      </semester>
+      <semester>
+          <no>Semester 2</no>
+      <courses>
+        <course>
+            <title>Java 2</title>
+            <courseId>ITC 5201</courseId>
+            <description>This course continues the study of object-oriented programming concepts begun in Java Programming 1 and also introduces many of the most important library classes that form part of the Java language.</description>
+            <time>Wednesday 3 pm</time>
+        </course>
+        <course>
+          <title>XML</title>
+          <courseId>ITC 5202</courseId>
+          <description>This course is an introduction to Extensible Markup Language (XML). This major technology is platform independent and versatile.</description>
+          <time>Thursday 3 pm</time>
+       </course>
+      </courses>
+    </semester>
+    </semesters>
+
+  
+</college>
+<!--
+   <name>Karan Gajjar</name>
+   <id>N01349164</id>
+-->

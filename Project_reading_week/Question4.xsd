@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="customerid">
+		<xs:simpleType>
+			<xs:restriction base="xs:short">
+				<xs:enumeration value="2384"/>
+				<xs:enumeration value="3384"/>
+				<xs:enumeration value="5268"/>
+				<xs:enumeration value="9008"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="item">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name"/>
+				<xs:element ref="price"/>
+				<xs:element ref="qty"/>
+			</xs:sequence>
+			<xs:attribute name="itemid" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="B12"/>
+						<xs:enumeration value="F32"/>
+						<xs:enumeration value="M12"/>
+						<xs:enumeration value="PS93"/>
+						<xs:enumeration value="Q52"/>
+						<xs:enumeration value="SD93"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="instock" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="N"/>
+						<xs:enumeration value="Y"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="name">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="All Star Hat"/>
+				<xs:enumeration value="All Star Shoe"/>
+				<xs:enumeration value="Bounce-o Ball"/>
+				<xs:enumeration value="Crash N Burn Skis"/>
+				<xs:enumeration value="Fancy Shirt"/>
+				<xs:enumeration value="Flying By Roller Skates"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="order">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="customerid"/>
+				<xs:element ref="status"/>
+				<xs:element ref="item" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="orders">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="order" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="price">
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal">
+				<xs:enumeration value="0.35"/>
+				<xs:enumeration value="120"/>
+				<xs:enumeration value="20"/>
+				<xs:enumeration value="25"/>
+				<xs:enumeration value="44.35"/>
+				<xs:enumeration value="55"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="qty">
+		<xs:simpleType>
+			<xs:restriction base="xs:short">
+				<xs:enumeration value="10"/>
+				<xs:enumeration value="100"/>
+				<xs:enumeration value="12"/>
+				<xs:enumeration value="15"/>
+				<xs:enumeration value="150"/>
+				<xs:enumeration value="25"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="status">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="complete"/>
+				<xs:enumeration value="pending"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,7 @@
+<xmlData:document xmlns:xmlData="http://www.abc.com/data"
+xmlns:ns="http://www.abc.com/data"
+>
+<xmlData:item>
+<ns:details>What’s wrong with this document?</ns:details>
+</xmlData:item>
+</xmlData:document>

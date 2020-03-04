@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>March 7</title>
+    <script>
+        function getTitle() {
+            var x = document.getElementsByTagName("title")[0];
+            document.getElementById("pp").innerHTML = x.innerHTML;
+        }
+    </script>
+</head>
+
+<body>
+    <h1> ITC5202 </h1>
+    <p>we are going to talk about the followings in this week</p>
+    <ul>
+        <li>DOM</li>
+        <li>how to process XML data using DOM</li>
+        <li>XML DOM</li>
+    </ul>
+    <button id="btn" onclick="getTitle()">Show page title</button>
+    <p id="pp">show here:</p>
+
+</body>
+
+</html>

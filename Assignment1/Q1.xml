@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css" ?>
+<!DOCTYPE degrees [
+<!ELEMENT degrees (degree+) >
+<!ELEMENT degree (title,approvalDate,effectiveDate,coordinator)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT approvalDate (#PCDATA)>
+<!ELEMENT effectiveDate (#PCDATA)>
+<!ELEMENT coordinator (#PCDATA)>
+]>
+<degrees>
+   <degree>
+      <title>Information Technology-Mobile Programmer</title>
+      <approvalDate>2019-01-12</approvalDate>
+      <effectiveDate>2019-09-01</effectiveDate>
+      <coordinator>Janis Wu</coordinator>
+   </degree>
+
+   <degree>
+      <title>Information Technology-Software Programmer</title>
+      <approvalDate>2017-12-12</approvalDate>
+      <effectiveDate>2018-09-01</effectiveDate>
+      <coordinator>Taylor Wapner</coordinator>
+   </degree>
+   
+   <degree>
+      <title>Information Technology-Web Programmer/Analyst</title>
+      <approvalDate>2017-12-12</approvalDate>
+      <effectiveDate>2018-09-01</effectiveDate>
+      <coordinator>Christiana Sanchez</coordinator>
+   </degree>
+  
+</degrees>
+<!--
+   <name>Karan Gajjar</name>
+   <id>N01349164</id>
+-->

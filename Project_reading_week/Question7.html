@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ITC5202 - Project</title>
+    <style>
+        body {
+            margin-right: 20%;
+            margin-left: 20%;
+            background-color: bisque;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: black;
+            color: cornsilk;
+            border-bottom: black;
+            width:100px;
+        }
+
+        td {
+            border-bottom: black;
+            text-align: center;
+            height: 30px;
+            width: 80px;
+            color:black;
+            padding: 15px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            color: greenyellow;
+            background-color: grey;
+            margin-right: 40%;
+            width: 200px;
+            height: 30px;
+            margin-left: 39%;
+        }
+
+        table {
+            margin-right: 45%;
+            margin-left: 40%;
+            display: inline-flex;
+            background-color: lightsalmon;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1> Order Report</h1>
+    <button onclick="show_Orders()"> Show pending orders </button>
+    <p id="demo"></p>
+
+</body>
+<script>
+    //Create the XHR object
+    function show_Orders() {
+        var xhttp = new XMLHttpRequest();
+        //Open the file
+        xhttp.open("GET", "Question7.xml", false);
+        //Send the request
+        xhttp.send();
+        // Read data
+        xmlDoc = xhttp.responseXML;
+        var order = xmlDoc.getElementsByTagName("order");
+        var customerid = xmlDoc.getElementsByTagName("customerid");
+        var status = xmlDoc.getElementsByTagName("status");
+
+        let txt = "<table border='1'>";
+        txt += "<th>Customer Id</th><th>Status</th>";
+        for (let i = 0; i < order.length; i++) {
+            if (status[i].innerHTML == "pending") {
+                txt += "<tr>"
+                txt += "<td>" + customerid[i].innerHTML + "</td>";
+                txt += "<td>" + status[i].innerHTML + "</td>";
+                txt += "</tr>";
+            }
+        }
+        txt += "</table>"
+        document.getElementById("demo").innerHTML = txt;
+    }
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        //Create the XHR object
+        var xhttp = new XMLHttpRequest();
+        //Open the file
+        xhttp.open("GET", "books.xml", false);
+        //Send the request
+        xhttp.send();
+        // Read data
+        xmlDoc = xhttp.responseXML;
+        //Display data   
+        var x = xmlDoc.getElementsByTagName("author");
+        var xlen = x.length;
+        var txt = "";
+        for (let i = 0; i < xlen; i++) {
+            txt += x[i].innerHTML + "<br>";
+        }
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+
+    <p id="demo"></p>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+title {
+    color: green;
+    display: block;
+    background-color: antiquewhite;
+}
+
+courseId {
+    color: yellowgreen;
+    display: block;
+}
+
+description {
+    color: royalblue;
+}
+
+semester {
+    color: red;
+    display: block;
+    background-color: brown;
+}
+
+time {
+    display: block;
+    color: magenta;
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ITC5202 - Project</title>
+</head>
+
+<body>
+    <h1> Order Report</h1>
+    <button onclick="loadData()"> Show pending orders </button>
+    <p id="demo"></p>
+</body>
+<script>
+    //Create the XHR object
+    function loadData() {
+        var xhttp = new XMLHttpRequest();
+        //Open the file
+        xhttp.open("GET", "order.xml", false);
+        //Send the request
+        xhttp.send();
+        // Read data
+        xmlDoc = xhttp.responseXML;
+        var order = xmlDoc.getElementsByTagName("order");
+        var customerid = xmlDoc.getElementsByTagName("customerid");
+        var status = xmlDoc.getElementsByTagName("status");
+        var item = xmlDoc.getElementsByTagName("item");
+        var name = xmlDoc.getElementsByTagName("name");
+        var price = xmlDoc.getElementsByTagName("price");
+        var qty = xmlDoc.getElementsByTagName("qty");
+
+        let txt = "<table border='1'>";
+        txt += "<th>ID</th><th>Customer Id</th>";
+        for (let i = 0; i < order.length; i++) {
+            if (status[i].innerHTML == "pending") {
+                txt += "<tr>"
+                txt += "<td>" + (i + 1) + "</td>"
+                txt += "<td>" + customerid[i].innerHTML + "</td>";
+                //txt += "<td>" + status[i].innerHTML + "</td>";
+                //txt += "<td>" + name[i].innerHTML + "</td>";
+                //txt += "<td>" + item[i].innerHTML.length + "</td>";
+                //console.log("hi 1: " + item[i].length);
+
+                /*for (let j = 0; j < item[i].length; j++) {
+                    txt += "<td>" + name[j].innerHTML + "</td>";
+                    txt += "<td>" + price[j].innerHTML + "</td>";
+                    txt += "<td>" + qty[j].innerHTML + "</td>";
+                }*/
+                txt += "</tr>";
+            }
+        }
+        console.log("hi : " + item.length);
+        txt += "</table>"
+        document.getElementById("demo").innerHTML = txt;
+    }
+</script>
+
+</html>

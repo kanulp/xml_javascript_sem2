@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog SYSTEM "myDTDGajjar.dtd">
+<catalog
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://example.com/xsd CD_Schema-Gajjar.xsd"
+>
+	<cd id="Collection1">
+		<title lang="en">Empire Burlesque</title>
+		<artist>Bob Dylan</artist>
+		<country>USA</country>
+		<company>Columbia</company>
+		<price currency="USD">10.90</price>
+		<salesPrice currency="USD"> 5.59 </salesPrice>
+		<releasedYear>1985</releasedYear>
+	</cd>
+	<cd id="Collection2">
+		<title lang="en">Hide your heart</title>
+		<artist>Bonnie Tyler</artist>
+		<country>UK</country>
+		<company>CBS Records</company>
+		<price currency="USD">9.90</price>
+		<releasedYear>1988</releasedYear>
+	</cd>
+</catalog>

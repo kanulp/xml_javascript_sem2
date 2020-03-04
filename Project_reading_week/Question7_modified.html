@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin-right: 20%;
+            margin-left: 20%;
+            background-color: rgb(213, 159, 238);
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: black;
+            color: rgb(206, 159, 233);
+            border-bottom: black;
+            width:100px;
+        }
+
+        td {
+            border-bottom: black;
+            text-align: center;
+            height: 30px;
+            width: 80px;
+            color:black;
+            padding: 15px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            color: black;
+            background-color: rgb(243, 236, 236);
+            margin-right: 40%;
+            width: 200px;
+            height: 30px;
+            margin-left: 39%;
+        }
+
+        table {
+            margin-right: 45%;
+            margin-left: 40%;
+            display: inline-flex;
+            background-color: rgb(237, 206, 240);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.open("GET", "order_modified.xml", false);
+
+        xhttp.send();
+
+        xmlDoc = xhttp.responseXML;
+        function show_orders() {
+            item1 = xmlDoc.getElementsByTagName("order");
+            items1 = xmlDoc.getElementsByTagName("status");
+
+            output = "<table> <th>Customer ID</th><th>Status</th>";
+
+            for (i = 0; i < items1.length; i++) {
+
+                if (items1[i].innerHTML == 'pending') {
+
+                    output += "<tr>";
+                    output += "<td>" + item1[i].getAttribute("customerid") + "</td>";
+                    output += "<td>" + items1[i].innerHTML + "</td>";
+
+
+
+                    output += "</tr>";
+                }
+            }
+            output += "</table>";
+            document.getElementById("demo").innerHTML = output;
+        }
+    </script>
+    <h1> Order Report</h1>
+    <button onclick="show_orders()"> Show pending orders </button>
+    <p id="demo"></p>
+</body>
+
+</html>
