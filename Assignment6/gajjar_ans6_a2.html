@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Assignment 6</h1>
+    <h2>Ans 2 part B</h2>
+    <h2>Student Data</h2>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "Question2_gajjar.json", false);
+        xhttp.send();
+
+        myObj = JSON.parse(xhttp.responseText);
+        var htmlResult = "<table border='1'>";
+        htmlResult += "<th>Student id</th><th>First Name</th><th>Last Name</th><th>Address</th><th>Zip</th><th>Subject(s)</th><th>Status</th><th>Marks</th>"
+        for (var i = 0; i < myObj.data.length; i++) {
+            htmlResult += "<tr>";
+            htmlResult += "<td>" + myObj.data[i].studentId + "</td>";
+            htmlResult += "<td>" + myObj.data[i].firstName + "</td>";
+            htmlResult += "<td>" + myObj.data[i].lastName + "</td>";
+            htmlResult += "<td>" + myObj.data[i].address + "</td>";
+            htmlResult += "<td>" + myObj.data[i].zip + "</td>";
+            htmlResult += "<td>" + myObj.data[i].classes[0].subject + "</td>";
+            htmlResult += "<td>" + myObj.data[i].classes[0].status + "</td>";
+            htmlResult += "<td>" + myObj.data[i].classes[0].marks + "</td>";
+            //if (myObj.itemlist.item[i].status["-return"] != null)
+            //    htmlResult += "<td>" + myObj.itemlist.item[i].status["-return"] + "</td>"
+            //else if (myObj.itemlist.item[i].status != null)
+            //    htmlResult += "<td>" + myObj.itemlist.item[i].status + "</td>"
+            //else
+            //    htmlResult += "<td>no data</td>";
+            htmlResult += "</tr>";
+
+        }
+        htmlResult += "</table>"
+        document.write(htmlResult);
+    </script>
+
+</body>
+
+</html>

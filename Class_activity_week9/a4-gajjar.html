@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Week9-Gajjar</h1>
+    <h2>Activity 4</h2>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "json_demo.json", false);
+        xhttp.send();
+
+        myObj = JSON.parse(xhttp.responseText);
+        document.write("-" + myObj.name + "," + myObj.age);
+        var htmlResult = "<table border='1'>";
+        htmlResult += "<th>Animal</th><th>Name</th>"
+        for (var i = 0; i < myObj.pets.length; i++) {
+            htmlResult += "<tr>";
+            htmlResult += "<td>" + myObj.pets[i].animal + "</td>";
+            htmlResult += "<td>" + myObj.pets[i].name + "</td>";
+            htmlResult += "</tr>";
+        }
+        htmlResult += "</table>"
+        document.write(htmlResult);
+    </script>
+
+
+
+</body>
+
+</html>

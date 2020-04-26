@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ITC5202 - Week10 </title>
+
+    <body>
+        <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = handler;
+            xhttp.open("GET", "json_demo.json", true);
+            xhttp.send();
+
+            function handler() {
+                console.log(this);
+            }
+        </script>
+
+    </body>
+
+</html>

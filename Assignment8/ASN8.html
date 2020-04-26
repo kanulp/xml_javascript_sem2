@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ITC5202</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("p:nth-of-type(2)").css('font-size', '80px');
+
+            $("li").eq(5).click(function() {
+                $("li").eq(4).html("<li> Handlebars.js</li> <li>Node.js </li>");
+            });
+            $("button").on("click", function() {
+                $.getJSON("Asn8-dataset.json", function(result) {
+                    //since it asks for 10th index 
+                    //else have to use loop.
+                    $("td").eq(0).append(result[9].ZIP);
+                    $("td").eq(1).append(result[9].City);
+                    $("td").eq(2).append(result[9].att);
+                    $("td").eq(3).append(result[9].lat);
+
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h3> ITC5202- Assignment 8 </h3>
+    <p>Famous JavaScript Libraries</p>
+    <ol>
+        <li> jQuery</li>
+        <li>Bootstrap</li>
+        <li>Backbone.js</li>
+        <li>Underscore.js</li>
+        <li>Handlebars.js</li>
+        <li>more</li>
+    </ol>
+    <br>
+
+    <p> Let's Process some JSON Data </p>
+    <button>
+Load the JSON data into the below table
+</button>
+    <table width="325" height="150" border="1">
+        <tr>
+            <th>ZIP</th>
+            <th>CITY</th>
+        </tr>
+        <tr>
+            <td height="100"></td>
+            <td height="100"></td>
+        </tr>
+    </table>
+
+
+
+
+
+</body>
+
+</html>

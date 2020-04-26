@@ -1,0 +1,70 @@
+{
+    "data": [{
+            "firstName": "Karan",
+            "lastName": "Gajjar",
+            "studentId": 1,
+            "address": "34 Dixington Crescent",
+            "zip": "M9P 2K3",
+            "classes": [{
+                    "subject": "java",
+                    "status": "passed",
+                    "marks": 34.4
+                },
+                {
+                    "subject": "java 2",
+                    "status": "dropped"
+                }
+            ]
+        },
+        {
+            "firstName": "Karan2",
+            "lastName": "Gajjar2",
+            "studentId": 2,
+            "address": "34 Dixington Crescent 2",
+            "zip": "M9P 2K3",
+            "classes": [{
+                "subject": "c#",
+                "status": "Dropped",
+                "marks": 54.4
+            }]
+        },
+        {
+            "firstName": "Karan3",
+            "lastName": "Gajjar3",
+            "studentId": 3,
+            "address": "34 Dixington Crescent 3",
+            "zip": "M9P 2K3",
+            "classes": [{
+                "subject": "XML",
+                "status": "Failed",
+                "marks": 24.4
+            }]
+        },
+        {
+            "firstName": "Karan4",
+            "lastName": "Gajjar4",
+            "studentId": 4,
+            "address": "34 Dixington Crescent 4",
+            "zip": "M9P 2K3",
+            "classes": [{
+                "subject": "plsql",
+                "status": "passed",
+                "marks": 34.4
+            }]
+        },
+        {
+            "firstName": "Karan5",
+            "lastName": "Gajjar5",
+            "studentId": 5,
+            "address": "34 Dixington Crescent 5",
+            "zip": "M9P 2K3",
+            "classes": [{
+                "subject": "DS",
+                "status": "passed",
+                "marks": 34.4
+            }]
+        }
+
+    ]
+
+}

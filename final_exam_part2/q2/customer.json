@@ -1,0 +1,37 @@
+[{
+        "customerID": "1002",
+        "fname": "John",
+        "lname": "Smith",
+        "product": "Laptop",
+        "invoiceNo": "200"
+    },
+    {
+        "customerID": "1002",
+        "fname": "John",
+        "lname": "Smith",
+        "product": "Printer",
+        "invoiceNo": "200"
+    },
+    {
+        "customerID": "1005",
+        "fname": "Sara",
+        "lname": "Coner",
+        "product": "Mouse",
+        "invoiceNo": "300"
+    },
+    {
+        "customerID": "1005",
+        "fname": "Sara",
+        "lname": "Coner",
+        "product": "Keyboard",
+        "invoiceNo": "310"
+    },
+    {
+        "customerID": "1005",
+        "fname": "Sara",
+        "lname": "Coner",
+        "product": "Printer",
+        "invoiceNo": "310"
+    }
+
+]

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Assignment 6</h1>
+    <h2>Ans c</h2>
+    <h2>List of all Visual Material</h2>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "library_item.json", false);
+        xhttp.send();
+
+        myObj = JSON.parse(xhttp.responseText);
+        var htmlResult = "<table border='1'>";
+        htmlResult += "<th>id</th><th>ISBN</th><th>Title</th><th>Author(s)</th><th>Publishers</th><th>Status</th>"
+        for (var i = 0; i < myObj.itemlist.item.length; i++) {
+            if (myObj.itemlist.item[i].type == "Visual Material") {
+                htmlResult += "<tr>";
+                htmlResult += "<td>" + (i + 1) + "</td>";
+                htmlResult += "<td>" + myObj.itemlist.item[i].isbn + "</td>";
+                htmlResult += "<td>" + myObj.itemlist.item[i].title + "</td>";
+                htmlResult += "<td>" + myObj.itemlist.item[i].authors.author + "</td>";
+                htmlResult += "<td>" + myObj.itemlist.item[i].publisher + "</td>";
+                if (myObj.itemlist.item[i].status["#text"] != null)
+                    htmlResult += "<td>" + myObj.itemlist.item[i].status["#text"] + "</td>"
+                else if (myObj.itemlist.item[i].status != null)
+                    htmlResult += "<td>" + myObj.itemlist.item[i].status + "</td>"
+                else
+                    htmlResult += "<td>no data</td>";
+                htmlResult += "</tr>";
+            }
+        }
+        htmlResult += "</table>"
+        document.write(htmlResult);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Answer 2</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th {
+            color: yellow;
+            background-color: blue;
+        }
+        
+        td,
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                var str = $("#inputId").val();
+                $.getJSON("customer.json", function(result) {
+                    var list = result;
+                    output = "<table border='1' >";
+                    output += "<tr>";
+                    output += "<th> First Name </th>";
+                    output += "<th> Last Name </th>";
+                    output += "<th> Product </th>";
+                    output += "<th> Invoice No </th>";
+                    output += "</tr>";
+                    for (i in list) {
+                        if (list[i].customerID === str) {
+                            output += "<tr>";
+                            output += "<td>" + list[i].fname + "</td>";
+                            output += "<td>" + list[i].lname + "</td>";
+                            output += "<td>" + list[i].product + "</td>";
+                            output += "<td>" + list[i].invoiceNo + "</td>";
+                            output += "</tr>";
+                        }
+                    }
+
+                    output += "</table>";
+                    $("#demo").html(output);
+
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    Enter Id : <input type="text" id="inputId">
+    <br/> <button type="button" id="btn">Submit</button>
+    <br/>
+    <p id="demo"></p>
+</body>
+
+</html>

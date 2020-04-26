@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Week9-Gajjar</h1>
+    <h2>Activity 3</h2>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "a3-gajjar.json", false);
+        xhttp.send();
+
+        myObj = JSON.parse(xhttp.responseText);
+        //document.write(myObj.catalog.photo[0].description);
+        var htmlResult = "<table border='1'>";
+        htmlResult += "<th>Cid</th><th>description</th>"
+        for (var i = 0; i < 5; i++) {
+            htmlResult += "<tr>";
+            htmlResult += "<td>" + myObj.catalog.photo[i]["-cid"] + "</td>";
+            htmlResult += "<td>" + myObj.catalog.photo[i].description + "</td>";
+            htmlResult += "</tr>";
+        }
+        htmlResult += "</table>"
+        document.write(htmlResult);
+    </script>
+
+</body>
+
+</html>

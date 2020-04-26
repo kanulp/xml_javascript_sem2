@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ITC5202</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#box1").click(function() {
+                $("#box1").hide(1000);
+                $("p:nth-of-type(2)").css('color', 'yellow');
+            })
+
+        });
+    </script>
+
+
+
+    <style>
+        #box1 {
+            width: 300px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ITC5202 - jQuery</h1>
+    <p>This is Paragraph 1</p>
+    <ul>
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+    </ul>
+    <p>This is Paragraph 2</p>
+    <div id="box1">
+        This is Box 1
+    </div>
+</body>
+
+</html>

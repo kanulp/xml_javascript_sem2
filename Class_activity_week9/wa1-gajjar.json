@@ -1,0 +1,38 @@
+{
+    "students": [{
+            "Fname": "Karan",
+            "Lname": "Gajjar",
+            "tel": "0123456789",
+            "email": "abc@gmail.com",
+            "addr": "toronto"
+        },
+        {
+            "Fname": "karan",
+            "Lname": "k",
+            "tel": "0222456789",
+            "email": "xyz@gmail.com",
+            "addr": "toronto"
+        },
+        {
+            "Fname": "sahith",
+            "Lname": "reddy",
+            "tel": "21212154544",
+            "email": "abc@gmail.com",
+            "addr": "toronto"
+        },
+        {
+            "Fname": "vijay",
+            "Lname": "thaker",
+            "tel": "0123456789",
+            "email": "bbb@gmail.com",
+            "addr": "toronto"
+        },
+        {
+            "Fname": "vraj",
+            "Lname": "shah",
+            "tel": "0123456789",
+            "email": "cccc@gmail.com",
+            "addr": "toronto"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+<html>
+
+<body>
+    <h1>Week9-Gajjar</h1>
+    <h2>Warup Activity 1</h2>
+    <script>
+        var myObj, x;
+
+        myObj = {
+            "students": [{
+                "Fname": "Karan",
+                "Lname": "Gajjar",
+                "tel": "0123456789",
+                "email": "abc@gmail.com",
+                "addr": "toronto"
+            }, {
+                "Fname": "karan",
+                "Lname": "gajjar",
+                "tel": "0222456789",
+                "email": "xyz@gmail.com",
+                "addr": "toronto"
+            }, {
+                "Fname": "sahith",
+                "Lname": "reddy",
+                "tel": "21212154544",
+                "email": "abc@gmail.com",
+                "addr": "toronto"
+            }, {
+                "Fname": "vijay",
+                "Lname": "thaker",
+                "tel": "0123456789",
+                "email": "bbb@gmail.com",
+                "addr": "toronto"
+            }, {
+                "Fname": "vraj",
+                "Lname": "shah",
+                "tel": "0123456789",
+                "email": "cccc@gmail.com",
+                "addr": "toronto"
+            }]
+
+        };
+
+        var htmlResult = "<table border='1'>";
+        htmlResult += "<th>First Name</th><th>Last Name</th><th>Tel</th><th>Email</th><th>Address</th>"
+        for (var i = 0; i < 5; i++) {
+            htmlResult += "<tr>";
+            htmlResult += "<td>" + myObj.students[i].Fname + "</td>";
+            htmlResult += "<td>" + myObj.students[i].Lname + "</td>";
+            htmlResult += "<td>" + myObj.students[i].tel + "</td>";
+            htmlResult += "<td>" + myObj.students[i].email + "</td>";
+            htmlResult += "<td>" + myObj.students[i].addr + "</td>";
+            htmlResult += "</tr>";
+        }
+        htmlResult += "</table>"
+        console.log(myObj);
+        console.log(myObj["students"][0].Fname);
+        console.log(myObj.students[0].Lname);
+        document.write(htmlResult);
+
+        text = JSON.stringify(myObj);
+        console.log(text);
+        obj = JSON.parse(text);
+        console.log(obj);
+    </script>
+    <br/>
+    <a href="https://kanulp.github.io">kanulp.github.io</a>
+</body>
+
+
+</html>

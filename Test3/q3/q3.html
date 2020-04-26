@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ITC5202 - Week10 </title>
+</head>
+
+<body>
+
+    <h1>Ajax --> JSON data</h1>
+
+    <button type="button" onclick="loadDoc()">Parse JSON data</button>
+    <br><br>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        let text = "";
+
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Sydney&mode=xml&appid=552db6bef060bc49ed630acb768874fa&units=imperial", true);
+            xhttp.send();
+
+            var xhttp1 = new XMLHttpRequest();
+            xhttp1.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction2(this);
+                }
+            };
+            xhttp1.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Sydney&mode=json&appid=552db6bef060bc49ed630acb768874fa&units=imperial", true);
+            xhttp1.send();
+        }
+
+
+        function myFunction(data) {
+
+            xmlDoc = data.responseXML;
+            output = "<table border='1'>";
+            output += "<tr id='heading'>";
+            output += "<th> City Name </th>";
+            output += "<th> Country Name </th>";
+            output += "<th> wind_speed</th>";
+            output += "<th> wind_degree </th>";
+
+            output += "</tr>";
+            output += "<tr>";
+            output += "<td>" + xmlDoc.getElementsByTagName("city")[0].attributes[1].value + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName('country')[0].innerHTML + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName("speed")[0].getAttribute('value') + " " + xmlDoc.getElementsByTagName('speed')[0].getAttribute('unit') + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName("direction")[0].getAttribute('value') + " &deg; </td>";
+
+            output += "</tr>";
+
+            output += "</table>";
+            document.getElementById("demo").innerHTML = output;
+
+        }
+
+
+
+        function myFunction2(data) {
+
+            xmlDoc = data.responseText;
+            myObj = JSON.parse(xmlDoc);
+
+            output = "<table border='1'>";
+            output += "<tr id='heading'>";
+            output += "<th> City Name </th>";
+            output += "<th> Country Name </th>";
+            output += "<th> wind_speed</th>";
+            output += "<th> wind_degree </th>";
+
+            output += "</tr>";
+
+            output += "<tr>";
+            output += "<td>" + myObj.name + "</td>";
+            output += "<td>" + myObj.sys.country + "</td>";
+            output += "<td>" + myObj.wind.speed + " </td>";
+            output += "<td>" + myObj.wind.deg + " &deg;";
+
+            output += "</tr>";
+
+            output += "</table>";
+            document.getElementById("demo1").innerHTML = output;
+
+        }
+    </script>
+
+</body>
+
+</html>

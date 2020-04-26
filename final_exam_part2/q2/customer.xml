@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="cust.xsl"?>
+<Customers>
+    <Customer>
+      <customerID>1002</customerID>
+      <Fname>John</Fname>
+      <Lname>Smith</Lname>
+      <Product>Laptop</Product>
+      <InvoiceNo>200</InvoiceNo>
+    </Customer>
+    <Customer>
+        <customerID>1002</customerID>
+        <Fname>John</Fname>
+        <Lname>Smith</Lname>
+        <Product>Printer</Product>
+        <InvoiceNo>200</InvoiceNo>
+      </Customer>
+      <Customer>
+        <customerID>1005</customerID>
+        <Fname>Sara</Fname>
+        <Lname>Coner</Lname>
+        <Product>Mouse</Product>
+        <InvoiceNo>300</InvoiceNo>
+      </Customer>
+      <Customer>
+        <customerID>1005</customerID>
+        <Fname>Sara</Fname>
+        <Lname>Coner</Lname>
+        <Product>Keyboard</Product>
+        <InvoiceNo>310</InvoiceNo>
+      </Customer>
+      <Customer>
+        <customerID>1005</customerID>
+        <Fname>Sara</Fname>
+        <Lname>Coner</Lname>
+        <Product>Printer</Product>
+        <InvoiceNo>310</InvoiceNo>
+      </Customer>
+</Customers>

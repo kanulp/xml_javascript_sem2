@@ -1,0 +1,133 @@
+{
+    "catalog": {
+        "-type": "photos",
+        "photo": [{
+                "-cid": "c1748",
+                "-donatedBy": "John Borelli",
+                "name": {
+                    "-metadata": "tunis cooper property museum",
+                    "#text": "Tunis R. Cooper property"
+                },
+                "description": "This photo was taken by John Borelli 's great-grandfather. It is believed to have been taken around 1830.David Demarest originally purchased the site of the chair factory in 1663. This site was under the ownership of the Demarest family until 1758. The property is listed in the National and New Jersey Registers of Historic Places.",
+                "date": "1830 circa",
+                "images": {
+                    "img": [{
+                            "-src": "1748a.jpg"
+                        },
+                        {
+                            "-src": "1748b.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "-cid": "c1749",
+                "-donatedBy": "John Borelli",
+                "name": {
+                    "-metadata": "tunis cooper property museum",
+                    "#text": "Tunis R. Cooper property"
+                },
+                "description": "A more recent picture of the property taken by the Borelli family.  The property is listed in the National and New Jersey Registers of Historic Places.",
+                "date": "1950 circa",
+                "images": {
+                    "img": {
+                        "-src": "1749a.jpg"
+                    }
+                }
+            },
+            {
+                "-cid": "c1411",
+                "-donatedBy": "Saint Johns Catholic Church",
+                "name": {
+                    "-metadata": "saint johns catholic church",
+                    "#text": "Saint Johns Church"
+                },
+                "description": "A more recent picture of the property taken by the Borelli family.The property is listed in the National and New Jersey Registers of Historic Places.",
+                "date": "1921"
+            },
+            {
+                "-cid": "c2003",
+                "-donatedBy": "Linda Choo",
+                "name": {
+                    "-metadata": "bergenfield elementary school",
+                    "#text": "Bergenfield School"
+                },
+                "description": "The No .5 Public School,a.k.a.Bergenfield School",
+                "date": "1920 circa",
+                "images": {
+                    "img": [{
+                            "-src": "2003a.jpg"
+                        },
+                        {
+                            "-src": "2003b.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "-cid": "c2078",
+                "-donatedBy": "Maria Giodelli",
+                "name": {
+                    "-metadata": "coopers pond water",
+                    "#text": "Coopers Pond"
+                },
+                "description": "A favorite spot where we used to go hang out as kids.The picture shows my brothers Robert and Michael.",
+                "date": "May 4, 1941",
+                "images": {
+                    "img": {
+                        "-src": "2078a.jpg"
+                    }
+                }
+            },
+            {
+                "-cid": "c2079",
+                "-donatedBy": "Linda Uffington",
+                "name": {
+                    "-metadata": "watch timekeeping pocket railway",
+                    "#text": "Pocket Watch"
+                },
+                "description": "A more recent picture of the property taken by the Borelli family.The property is listed in the National and New Jersey Registers of Historic Places.",
+                "date": "1870 circa",
+                "images": {
+                    "img": [{
+                            "-src": "2079a.jpg"
+                        },
+                        {
+                            "-src": "2079b.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "-cid": "c3233",
+                "name": {
+                    "-metadata": "hotel",
+                    "#text": "Bergenfield Hotel"
+                },
+                "description": "The Knollfield Hotel was known as the Bergenfield Hotel.The property is listed in the National and New Jersey Registers of Historic Places.",
+                "date": "circa 1920"
+            },
+            {
+                "-cid": "c3433",
+                "name": {
+                    "-metadata": "sweeney coal fuel",
+                    "#text": "Sweeney Coal"
+                },
+                "description": "Sweeny Fuel Company located near New Bridge Road and railroad tracks.",
+                "date": "1920",
+                "images": {
+                    "img": [{
+                            "-src": "3433a.jpg"
+                        },
+                        {
+                            "-src": "3433b.jpg"
+                        },
+                        {
+                            "-src": "3433c.jpg"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

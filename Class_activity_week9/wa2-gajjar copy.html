@@ -1,0 +1,40 @@
+<html>
+
+<body>
+    <h1>Week9-Gajjar</h1>
+    <h2>Activity 2</h2>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "wa1-gajjar.json", false);
+        xhttp.send();
+
+        myObj = JSON.parse(xhttp.responseText);
+
+        var htmlResult = "<table border='1'>";
+        htmlResult += "<th>First Name</th><th>Last Name</th><th>Tel</th><th>Email</th><th>Address</th>"
+        for (var i = 0; i < 5; i++) {
+            htmlResult += "<tr>";
+            htmlResult += "<td>" + myObj.students[i].Fname + "</td>";
+            htmlResult += "<td>" + myObj.students[i].Lname + "</td>";
+            htmlResult += "<td>" + myObj.students[i].tel + "</td>";
+            htmlResult += "<td>" + myObj.students[i].email + "</td>";
+            htmlResult += "<td>" + myObj.students[i].addr + "</td>";
+            htmlResult += "</tr>";
+        }
+        htmlResult += "</table>"
+        console.log(myObj);
+        console.log(myObj["students"][0].Fname);
+        console.log(myObj.students[0].Lname);
+        document.write(htmlResult);
+
+        text = JSON.stringify(myObj);
+        console.log(text);
+        obj = JSON.parse(text);
+        console.log(obj);
+    </script>
+    <br/>
+    <a href="https://kanulp.github.io">kanulp.github.io</a>
+</body>
+
+
+</html>

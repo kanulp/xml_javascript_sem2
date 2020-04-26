@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title> ITC5202 - Week 13</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(e) {
+            $.ajax({
+                    url: "MyData.json",
+                })
+                .done(function(data) {
+                    console.log(data)
+                })
+                .fail(function(data) {
+                    console.log("Requested resource does not exist.")
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <p id="demo"></p>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ITC5202 - Week10 </title>
+
+    <body>
+
+        <h1>Ajax --> JSON data</h1>
+
+        <button type="button" onclick="loadDoc()">Parse JSON data</button>
+        <br><br>
+        <p id="demo"></p>
+
+        <script>
+            function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        myFunction(this);
+                    } else alert("error");
+                };
+                xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=552db6bef060bc49ed630acb768874fa", true);
+                xhttp.send();
+            }
+
+            function myFunction(json) {
+                var jsonDoc = json.responseText;
+                var myObj = JSON.parse(jsonDoc);
+                document.getElementById("demo").innerHTML = "City : " + myObj["name"] + "<br/> Current temperature : " + myObj["main"]["temp"] +
+                    "<br/> Feels like : " + myObj["main"]["feels_like"] + "<br/> Max temperature : " +
+                    myObj["main"]["temp_max"] + "<br/> Min Temperature : " + myObj["main"]["temp_min"] +
+                    "<br/> Weather Description : " + myObj["weather"][0]["description"];
+            }
+        </script>
+
+    </body>
+
+</html>

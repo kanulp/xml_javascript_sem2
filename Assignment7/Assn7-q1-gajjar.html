@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ITC5202 - Week10 </title>
+
+    <body>
+        <h3>Json Parsing weather api:</h3>
+        <button type="button" onclick="loadDoc()">Parse JSON data</button>
+        <br><br>
+        <p id="demo"></p>
+
+        <script>
+            var list;
+            var myObj;
+            var jsonDoc;
+
+            function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+
+                        myFunction(this);
+                    }
+                };
+                xhttp.open("GET", "http://api.openweathermap.org/data/2.5/group?id=6167865,5894171&appid=552db6bef060bc49ed630acb768874fa&units=imperial", true);
+                xhttp.send();
+            }
+
+            function myFunction(json) {
+                jsonDoc = json.responseText;
+                myObj = JSON.parse(jsonDoc);
+
+                let sec = myObj.list[0].sys.sunrise;
+                let date = new Date(sec * 1000);
+                let time = date.toLocaleTimeString();
+
+                output = "<table border='1'>";
+                output += "<tr id='heading'>";
+                output += "<th> Number </th>";
+                output += "<th> City Name </th>";
+                output += "<th> Max Temp (Fahrenheit)</th>";
+                output += "<th> Min Temp (Fahrenheit) </th>";
+                output += "<th> Sunrise </th>";
+                output += "<th> Sunset </th>";
+                output += "</tr>";
+                let text = "";
+                for (let i = 0; i < myObj.list.length; i++) {
+                    output += "<tr>";
+                    output += "<td>" + (i + 1) + "</td>";
+                    output += "<td>" + myObj.list[i].name + "</td>";
+                    output += "<td>" + myObj.list[i].main.temp_max + "</td>";
+                    output += "<td>" + myObj.list[i].main.temp_min + "</td>";
+                    let sec = myObj.list[i].sys.sunrise;
+                    let sec2 = myObj.list[i].sys.sunset;
+                    let date = new Date(sec * 1000);
+                    let date2 = new Date(sec2 * 1000);
+                    let time = date.toLocaleTimeString();
+                    let time2 = date2.toLocaleTimeString();
+                    output += "<td>" + time + "</td>";
+                    output += "<td>" + time2 + "</td>";
+                    output += "</tr>";
+                }
+
+                output += "</table>";
+                document.getElementById("demo").innerHTML = output;
+
+
+            }
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Test 3</h1>
+    <h2>Ans 1</h2>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "data-set-1-.json", false);
+        xhttp.send();
+
+        myObj = JSON.parse(xhttp.responseText);
+        var htmlResult = "<table border='1'>";
+        htmlResult += "<th>id</th><th>Zip Code</th><th>City</th>"
+        for (var i = 0; i < myObj.length; i++) {
+            htmlResult += "<tr>";
+            htmlResult += "<td>" + (i + 1) + "</td>";
+            htmlResult += "<td>" + myObj[i].ZIP + "</td>";
+            htmlResult += "<td>" + myObj[i].City + "</td>";
+            htmlResult += "</tr>";
+        }
+        htmlResult += "</table>"
+        document.write(htmlResult);
+    </script>
+
+</body>
+
+</html>

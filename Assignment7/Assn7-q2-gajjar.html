@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ITC5202 - Week10 </title>
+</head>
+
+<body>
+
+    <h1>Ajax --> JSON data</h1>
+
+    <button type="button" onclick="loadDoc()">Parse JSON data</button>
+    <br><br>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        let text = "";
+
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Toronto&mode=xml&appid=552db6bef060bc49ed630acb768874fa&units=imperial", true);
+            xhttp.send();
+
+            var xhttp1 = new XMLHttpRequest();
+            xhttp1.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction2(this);
+                }
+            };
+            xhttp1.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Barrie&mode=xml&appid=552db6bef060bc49ed630acb768874fa&units=imperial", true);
+            xhttp1.send();
+        }
+
+
+        function myFunction(data) {
+
+            xmlDoc = data.responseXML;
+
+            output = "<table border='1'>";
+            output += "<tr id='heading'>";
+            output += "<th> City Name </th>";
+            output += "<th> Max Temp (Fahrenheit)</th>";
+            output += "<th> Min Temp (Fahrenheit) </th>";
+            output += "<th> Sunrise </th>";
+            output += "<th> Sunset </th>";
+
+            output += "</tr>";
+
+            output += "<tr>";
+            output += "<td>" + xmlDoc.getElementsByTagName("city")[0].attributes[1].value + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName("temperature")[0].attributes[1].value + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName("temperature")[0].attributes[2].value + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName("sun")[0].attributes[0].value + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName("sun")[0].attributes[1].value + "</td>";
+
+            output += "</tr>";
+
+            output += "</table>";
+            document.getElementById("demo").innerHTML = output;
+
+        }
+
+
+
+        function myFunction2(data) {
+
+            xmlDoc = data.responseXML;
+
+            output = "<table border='1'>";
+            output += "<tr id='heading'>";
+            output += "<th> City Name </th>";
+            output += "<th> Max Temp (Fahrenheit)</th>";
+            output += "<th> Min Temp (Fahrenheit) </th>";
+            output += "<th> Sunrise </th>";
+            output += "<th> Sunset </th>";
+
+            output += "</tr>";
+
+            output += "<tr>";
+            output += "<td>" + xmlDoc.getElementsByTagName("city")[0].attributes[1].value + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName("temperature")[0].attributes[1].value + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName("temperature")[0].attributes[2].value + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName("sun")[0].attributes[0].value + "</td>";
+            output += "<td>" + xmlDoc.getElementsByTagName("sun")[0].attributes[1].value + "</td>";
+
+            output += "</tr>";
+
+            output += "</table>";
+            document.getElementById("demo1").innerHTML = output;
+
+        }
+    </script>
+
+</body>
+
+</html>

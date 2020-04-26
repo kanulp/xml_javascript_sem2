@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ITC5202 - Week10 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <body>
+        <h3>Json Parsing weather api :</h3>
+        <button type="button">Parse JSON data</button>
+        <br><br>
+        <p id="demo"></p>
+        <script>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    $.getJSON("http://api.openweathermap.org/data/2.5/group?id=6167865,6092122&lang=fr&units=metric&appid=552db6bef060bc49ed630acb768874fa&units=imperial", function(result) {
+                        var list = result.list;
+                        output = "<table border='1' >";
+                        output += "<tr>";
+                        output += "<th> City Name </th>";
+                        output += "<th> Description </th>";
+                        output += "<th> Humidity </th>";
+                        output += "<th> Max_Temprature </th>";
+                        output += "<th> Min_Temprature </th>";
+                        output += "<th> Wind Speed </th>";
+                        output += "<th> Sunrise </th>";
+                        output += "<th> Sunset </th>";
+                        output += "</tr>";
+
+                        // var text = "";
+                        for (i in list) {
+                            output += "<tr>";
+                            output += "<td>" + list[i].name + "</td>";
+                            output += "<td>" + list[i].weather[0].description + "</td>";
+                            output += "<td>" + list[i].main.humidity + "</td>";
+                            output += "<td>" + list[i].main.temp_max + "</td>";
+                            output += "<td>" + list[i].main.temp_min + "</td>";
+                            output += "<td>" + list[i].wind.speed + "</td>";
+                            let sec = list[i].sys.sunrise;
+                            let sec2 = list[i].sys.sunset;
+                            let date = new Date(sec * 1000);
+                            let date2 = new Date(sec2 * 1000);
+                            let time = date.toLocaleTimeString();
+                            let time2 = date2.toLocaleTimeString();
+                            output += "<td>" + time + "</td>";
+                            output += "<td>" + time2 + "</td>";
+                            output += "</tr>";
+
+                        }
+
+                        output += "</table>";
+                        //document.getElementById("demo").innerHTML = output;
+                        $("#demo").html(output);
+
+                    });
+                });
+
+
+            });
+        </script>
+
+
+    </body>
+
+</html>

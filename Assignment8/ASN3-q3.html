@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ITC5202</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").on("click", function() {
+                $.getJSON("Asn8-dataset.json", function(result) {
+                    $("#length").html("Length is : " + result.length);
+                    for (i in result) {
+                        $("table").append("<tr><td>" + result[i].ZIP + "</td><td>" + result[i].City + "</td></tr>");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h3> ITC5202- Assignment 8 </h3>
+    <button>
+Load the JSON data into the below table
+</button>
+    <br /><br />
+    <p id="length"></p>
+    <table border="1" width="325" height="150">
+        <tr>
+            <th>ZIP</th>
+            <th>CITY</th>
+        </tr>
+    </table>
+</body>
+
+</html>
